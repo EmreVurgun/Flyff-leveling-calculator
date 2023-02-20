@@ -93,7 +93,7 @@ def calculatespesifictime():
   end_level = input("What level do you want to get to? (Add H or M for hero and master. example: 130H)")
   version = input("What version of flyff do you play? (Enter P for flyff pc, U for flyff universe.)")
   prem = input("Do you have access to premium areas like azria,traseia? Enter Y for yes N for no (Coral island not necessary.)")
-  amp = input("What is your exp amplification% ? (for example enter 250 if you level with 5 es amps active or 0 if you have no amps)")
+  amp = input("What is your exp amplification% ? (Enter 100 more than the amps give for example 350 if you level with 5 es amps active or 100 if you have no amps)")
   mobs = 0
 
 
@@ -129,7 +129,7 @@ def calculatespesifictime():
       mobs += mobs
     elif "M" in starting_level and "H" in end_level:
       mobs += sum(mob_universe[int(re.sub("M|H|\s", "", starting_level))-1:120])
-  time = round((mobs*time_per_mob/((int(amp)+100)/100)/3600),2)
+  time = round((mobs*time_per_mob/(int(amp)/100)/3600),2)
   ### results
   print("------------------------------------------")
   print(f"Total time to your goal is: {time} hours.")
