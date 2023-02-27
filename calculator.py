@@ -102,7 +102,7 @@ def calculatespesifictime():
     if prem == "Y":
       mobs = sum(mob_prem[int(re.sub("M|H|\s", "", starting_level))-1:int(re.sub("M|H|\s", "",end_level))])
       if not("M" in starting_level) and not("H" in starting_level) and "M" in end_level:
-        mobs += sum(mob_prem[59:int(re.sub("M|H|\s", "",end_level))]*2+sum(mob_prem[int(re.sub("M|H|\s", "",end_level))-1:120]))
+        mobs += sum(mob_prem[59:int(re.sub("M|H|\s", "",end_level))])*2+sum(mob_prem[int(re.sub("M|H|\s", "",end_level))-1:120])
       elif not("M" in starting_level) and not("H" in starting_level) and "H" in end_level:
         mobs += sum(mob_prem[59:120])*2
       elif "M" in starting_level and "M" in end_level:
@@ -112,7 +112,7 @@ def calculatespesifictime():
     if prem == "N":
       mobs = sum(mob_normal[int(re.sub("M|H|\s", "", starting_level))-1:int(re.sub("M|H|\s", "",end_level))])
       if not("M" in starting_level) and not("H" in starting_level) and "M" in end_level:
-        mobs += sum(mob_normal[59:int(re.sub("M|H|\s", "",end_level))]*2+sum(mob_normal[int(re.sub("M|H|\s", "",end_level))-1:120]))
+        mobs += sum(mob_normal[59:int(re.sub("M|H|\s", "",end_level))])*2+sum(mob_normal[int(re.sub("M|H|\s", "",end_level))-1:120])
       elif not("M" in starting_level) and not("H" in starting_level) and "H" in end_level:
         mobs += sum(mob_normal[59:120])*2
       elif "M" in starting_level and "M" in end_level:
@@ -122,7 +122,7 @@ def calculatespesifictime():
   if version == "U":
     mobs = sum(mob_universe[int(re.sub("M|H|\s", "", starting_level))-1:int(re.sub("M|H|\s", "",end_level))])
     if not("M" in starting_level) and not("H" in starting_level) and "M" in end_level:
-      mobs += sum(mob_universe[59:int(re.sub("M|H|\s", "",end_level))]*2+sum(mob_universe[int(re.sub("M|H|\s", "",end_level))-1:120]))
+      mobs += sum(mob_universe[59:int(re.sub("M|H|\s", "",end_level))])*2+sum(mob_universe[int(re.sub("M|H|\s", "",end_level))-1:120])
     elif not("M" in starting_level) and not("H" in starting_level) and "H" in end_level:
       mobs += sum(mob_universe[59:120])*2
     elif "M" in starting_level and "M" in end_level:
